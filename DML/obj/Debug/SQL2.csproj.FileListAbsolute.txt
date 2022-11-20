@@ -1,0 +1,18 @@
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\SQL2.csproj.ResolveComReference.cache
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\MainWindow.g.cs
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\App.g.cs
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\MainWindow.baml
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\mxd.SQL2.Properties.Resources.resources
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\SQL2.csproj.GenerateResource.cache
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\SQL2.csproj.CoreCompileInputs.cache
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\bin\Debug\Dukes Mighty Launcher.exe.config
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\bin\Debug\Dukes Mighty Launcher.exe
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\bin\Debug\Dukes Mighty Launcher.pdb
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\Dukes Mighty Launcher_MarkupCompile.cache
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\Dukes Mighty Launcher_MarkupCompile.lref
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\Dukes Mighty Launcher.g.resources
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\Dukes Mighty Launcher.exe
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\Dukes Mighty Launcher.pdb
+C:\Users\Zackary Paul\Desktop\Simple-Quake-Launcher-2-master\SQL2\obj\Debug\SQL2.csproj.AssemblyReference.cache

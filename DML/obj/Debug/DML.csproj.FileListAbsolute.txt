@@ -1,0 +1,36 @@
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\bin\Debug\Dukes Mighty Launcher.exe.config
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\bin\Debug\Dukes Mighty Launcher.exe
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\bin\Debug\Dukes Mighty Launcher.pdb
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\DML.csproj.AssemblyReference.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\DML.csproj.ResolveComReference.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\MainWindow.g.cs
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\App.g.cs
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\Dukes Mighty Launcher_MarkupCompile.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\Dukes Mighty Launcher_MarkupCompile.lref
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\MainWindow.baml
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\Dukes Mighty Launcher.g.resources
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\mxd.SQL2.Properties.Resources.resources
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\DML.csproj.GenerateResource.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\DML.csproj.CoreCompileInputs.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\Dukes Mighty Launcher.exe
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\SQL2\obj\Debug\Dukes Mighty Launcher.pdb
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\bin\Debug\Dukes Mighty Launcher.exe.config
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\bin\Debug\Dukes Mighty Launcher.exe
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\bin\Debug\Dukes Mighty Launcher.pdb
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\DML.csproj.AssemblyReference.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\DML.csproj.ResolveComReference.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\MainWindow.g.cs
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\App.g.cs
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\Dukes Mighty Launcher_MarkupCompile.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\Dukes Mighty Launcher_MarkupCompile.lref
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\MainWindow.baml
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\Dukes Mighty Launcher.g.resources
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\mxd.SQL2.Properties.Resources.resources
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\DML.csproj.GenerateResource.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\DML.csproj.CoreCompileInputs.cache
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\Dukes Mighty Launcher.exe
+D:\Prv-Desktop\User\Documents\GitHub\DukesMightyLauncher\DML\obj\Debug\Dukes Mighty Launcher.pdb
