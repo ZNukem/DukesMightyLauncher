@@ -1,0 +1,34 @@
+﻿@page "/about"
+
+<h1>About Page</h1>
+
+<button class="btn btn-primary" @onclick="ShowModal">Open About Modal</button>
+
+@if (showModal)
+{
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>About This App</h2>
+                <button class="modal-close" @onclick="CloseModal">X</button>
+            </div>
+            <div class="modal-body">
+                This is a Blazor app that demonstrates how to create a modal without JavaScript.
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private bool showModal = false;
+
+    private void ShowModal()
+    {
+        showModal = true;
+    }
+
+    private void CloseModal()
+    {
+        showModal = false;
+    }
+}

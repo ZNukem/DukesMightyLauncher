@@ -1,0 +1,57 @@
+﻿@page "/"
+@inject PhotinoNET.PhotinoWindow photinoWindow
+<h1>Game Launcher</h1>
+<div class="launcher-container">
+    <div class="game-library">
+        <!-- Your game library listing -->
+    </div>
+
+    <div class="launch-game">
+        <h2>Launch Game</h2>
+        <p>Selected Game Path: @gameExecutablePath</p>
+        <InputFile OnChange="HandleFileSelected" />
+        <button @onclick="LaunchGame">Start Game</button>
+        <button @onclick="SaveConfig">Save Configuration</button>
+    </div>
+</div>
+
+@code {
+    private string gameExecutablePath = "C:\\Path\\To\\UnrealTournament.exe";
+    private string configFilePath = "config.json";
+
+    private void LaunchGame()
+    {
+        try
+        {
+            System.Diagnostics.Process.Start(gameExecutablePath);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+    }
+
+    private void SaveConfig()
+    {
+        // Save the configuration as JSON
+        var config = new GameConfig { GamePath = gameExecutablePath };
+        string json = System.Text.Json.JsonSerializer.Serialize(config);
+
+        System.IO.File.WriteAllText(configFilePath, json);
+    }
+
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        var result = photinoWindow.ShowOpenFile();
+        if (result != null && result.Any())
+        {
+            // Handle the selected file (in this case, it's the game executable)
+            gameExecutablePath = result.First();
+        }
+    }
+
+    private class GameConfig
+    {
+        public string GamePath { get; set; }
+    }
+}
