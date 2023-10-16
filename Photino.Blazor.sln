@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.Blazor.Sample", "Samples\Photino.Blazor.Sample\Photino.Blazor.Sample.csproj", "{7C8371BF-E92B-437F-916E-53C0DADC2C54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DML", "Samples\Photino.Blazor.Sample\DML.csproj", "{7C8371BF-E92B-437F-916E-53C0DADC2C54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

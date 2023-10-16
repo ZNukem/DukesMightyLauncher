@@ -3,7 +3,7 @@ using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Photino.Blazor;
 
-namespace Photino.Blazor.Sample
+namespace DML
 {
     class Program
     {
@@ -23,7 +23,7 @@ namespace Photino.Blazor.Sample
             // customize window
             app.MainWindow
                 .SetIconFile("favicon.ico")
-                .SetTitle("Photino Blazor Sample");
+                .SetTitle("Dukes Mighty Launcher");
 
             AppDomain.CurrentDomain.UnhandledException += (sender, error) =>
             {
