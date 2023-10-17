@@ -1,57 +1,231 @@
 ﻿@page "/"
-@inject PhotinoNET.PhotinoWindow photinoWindow
-<h1>Game Launcher</h1>
-<div class="launcher-container">
-    <div class="game-library">
-        <!-- Your game library listing -->
-    </div>
 
-    <div class="launch-game">
-        <h2>Launch Game</h2>
-        <p>Selected Game Path: @gameExecutablePath</p>
-        <InputFile OnChange="HandleFileSelected" />
-        <button @onclick="LaunchGame">Start Game</button>
-        <button @onclick="SaveConfig">Save Configuration</button>
-    </div>
+@using System.Diagnostics
+@using System.IO
+@using System.Linq
+@using System.Text.Json
+@using System.Text.Json.Serialization
+
+<h1>Launcher</h1>
+
+<button @onclick="LaunchGame">Launch Game</button>
+<button @onclick="LaunchEditor">Launch Editor</button>
+
+<div>
+    <label for="selectionType">Select Mode:</label>
+    <input type="radio" id="mapSelection" name="selectionType" value="map" @onchange="ToggleSelectionType" checked="@mapSelected" /> Map
+    <input type="radio" id="modSelection" name="selectionType" value="mod" @onchange="ToggleSelectionType" checked="@modSelected" /> Mod
+</div>
+
+<div>
+    @if (mapSelected)
+    {
+        <label for="mapSelect">Select a Map:</label>
+        <select id="mapSelect" @bind="selectedMap">
+            <option value="">-- Select Map --</option>
+            @foreach (var map in availableMaps)
+            {
+                <option value="@map">@map</option>
+            }
+        </select>
+    }
+    else if (modSelected)
+    {
+        <label for="modSelect">Select a Mod:</label>
+        <select id="modSelect" @bind="selectedMod">
+            <option value="">-- Select Mod --</option>
+            @foreach (var mod in availableMods)
+            {
+                <option value="@mod.ModName">@mod.ModName</option>
+            }
+        </select>
+
+        @if (!string.IsNullOrEmpty(selectedMod))
+        {
+            var selectedModInfo = availableMods.FirstOrDefault(m => m.ModName == selectedMod);
+            if (selectedModInfo != null)
+            {
+                <div>
+                    <img src="@selectedModInfo.Screenshot" alt="Mod Screenshot" width="200" height="150" />
+                    <p>@selectedModInfo.Description</p>
+                </div>
+            }
+        }
+    }
+</div>
+
+<label for="difficultySelect">Select Difficulty:</label>
+<select id="difficultySelect" @bind="selectedDifficulty">
+    <option value="0">Piece of Cake</option>
+    <option value="1">Let's Rock</option>
+    <option value="2">Come Get Some</option>
+    <option value="3">Damn I'm Good</option>
+</select>
+
+<div>
+    <p>@errorMessage</p>
 </div>
 
 @code {
-    private string gameExecutablePath = "C:\\Path\\To\\UnrealTournament.exe";
-    private string configFilePath = "config.json";
+    private bool mapSelected = true;
+    private bool modSelected = false;
+    private string selectedMap;
+    private string selectedMod;
+    private string selectedDifficulty;
+    private List<string> availableMaps = new List<string>();
+    private List<ModInfo> availableMods = new List<ModInfo>();
+    private string errorMessage = "";
+
+    protected override void OnInitialized()
+    {
+        // Set the folder path where your .dnf maps are located
+        string mapsFolderPath = ".\\maps\\";
+
+        if (Directory.Exists(mapsFolderPath))
+        {
+            // Get all .dnf files in the folder
+            availableMaps = Directory.GetFiles(mapsFolderPath, "*.dnf")
+                                      .Select(Path.GetFileName)
+                                      .ToList();
+        }
+        else
+        {
+            errorMessage = "Maps folder not found.";
+        }
+
+        // Set the folder path where your .json mod files are located
+        string modsFolderPath = ".\\dml-mods\\";
+
+        if (Directory.Exists(modsFolderPath))
+        {
+            // Read mod JSON files
+            foreach (var modFile in Directory.GetFiles(modsFolderPath, "*.json"))
+            {
+                try
+                {
+                    var modInfo = JsonSerializer.Deserialize<ModInfo>(File.ReadAllText(modFile));
+                    availableMods.Add(modInfo);
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors during JSON file reading
+                    errorMessage = "Error reading mod JSON files.";
+                }
+            }
+        }
+        else
+        {
+            errorMessage = "DML mods folder not found.";
+        }
+    }
 
     private void LaunchGame()
     {
+        // Path to the Unreal Gold executable
+        string gamePath = ".\\system\\DukeForever.exe";
+
+        if (!File.Exists(gamePath))
+        {
+            errorMessage = "DukeForever.exe not found. Also make sure you place DML in root of DNF2011.";
+            return;
+        }
+
+        // Optional: Pass command-line arguments
+        string arguments = "";
+
+        if (mapSelected && !string.IsNullOrEmpty(selectedMap))
+        {
+            arguments += $"{selectedMap}";
+        }
+        else if (modSelected && !string.IsNullOrEmpty(selectedMod))
+        {
+            // Find the selected mod's StartMap value and add it to the arguments
+            var selectedModInfo = availableMods.FirstOrDefault(m => m.ModName == selectedMod);
+            if (selectedModInfo != null && !string.IsNullOrEmpty(selectedModInfo.StartMap))
+            {
+                arguments += $"{selectedModInfo.StartMap}";
+            }
+        }
+
+        if (!string.IsNullOrEmpty(selectedDifficulty))
+        {
+            arguments += $" Difficulty={selectedDifficulty}";
+        }
+
+        ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = gamePath,
+                Arguments = arguments,
+                WorkingDirectory = Path.GetDirectoryName(gamePath),
+            };
+
         try
         {
-            System.Diagnostics.Process.Start(gameExecutablePath);
+            Process.Start(startInfo);
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error: " + ex.Message);
+            errorMessage = "Error launching DukeForever.";
         }
     }
 
-    private void SaveConfig()
+    private void LaunchEditor()
     {
-        // Save the configuration as JSON
-        var config = new GameConfig { GamePath = gameExecutablePath };
-        string json = System.Text.Json.JsonSerializer.Serialize(config);
+        // Path to the Unreal Editor executable (adjust the path as needed)
+        string editorPath = ".\\system\\DukeForeverEditor.exe";
 
-        System.IO.File.WriteAllText(configFilePath, json);
-    }
-
-    private void HandleFileSelected(InputFileChangeEventArgs e)
-    {
-        var result = photinoWindow.ShowOpenFile();
-        if (result != null && result.Any())
+        if (!File.Exists(editorPath))
         {
-            // Handle the selected file (in this case, it's the game executable)
-            gameExecutablePath = result.First();
+            errorMessage = "DukeForeverEditor.exe not found. Also make sure you place DML in root of DNF2011.";
+            return;
+        }
+
+        // Specify the argument for DukeForeverEditor
+        string editorArguments = "TestRenDev";
+
+        ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = editorPath,
+                Arguments = editorArguments,
+                WorkingDirectory = Path.GetDirectoryName(editorPath),
+            };
+
+        try
+        {
+            Process.Start(startInfo);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Error launching DukeForeverEditor.";
         }
     }
 
-    private class GameConfig
+    public class ModInfo
     {
-        public string GamePath { get; set; }
+        [JsonPropertyName("Modname")]
+        public string ModName { get; set; }
+
+        [JsonPropertyName("Screenshot")]
+        public string Screenshot { get; set; }
+
+        [JsonPropertyName("StartMap")]
+        public string StartMap { get; set; }
+
+        [JsonPropertyName("Description")]
+        public string Description { get; set; }
+    }
+
+    private void ToggleSelectionType(ChangeEventArgs e)
+    {
+        if (e.Value.ToString() == "map")
+        {
+            mapSelected = true;
+            modSelected = false;
+        }
+        else if (e.Value.ToString() == "mod")
+        {
+            mapSelected = false;
+            modSelected = true;
+        }
     }
 }
