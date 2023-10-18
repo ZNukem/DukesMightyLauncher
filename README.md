@@ -6,7 +6,7 @@ It is a game launcher for Duke Nukem Forever (2011), designed to make it easy fo
 - Run maps, either user or custom maps, from the single-player mode via a dropdown menu.
 - Directly select Difficulty from the dropdown menu.
 - Run custom mods from a JSON configuration with an example for DML.
-- Buttons to launch the map editor.
+- Buttons to launch the custom dnf map editor.
 
 ## What's Next
 The next steps include:
