@@ -19,14 +19,14 @@ The next steps include:
 ## License
 Yes, it's open source! It is under the MIT license. Feel free to reach out and help with the project. If you fork it, don't forget to give credit back. We welcome contributions from the community!
 
-# Big thanks to
+## Big thanks to
 People that helped test it out:
 - Sixty Four
 - The Real Snake Plissken
 
 Or anyone I haven't mentioned here, please hit me up, and I will add you.
 
-# Follow The Community
+## Follow The Community
 
 If you haven't already, come and join me at my chill Duke community, Duke Nukem Central.
 We have a vast collection of mods, maps and tools, for all Duke Nukem games, making it the perfect place to hang out and chat.
