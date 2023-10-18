@@ -32,8 +32,8 @@ If you haven't already, come and join me at my chill Duke community, Duke Nukem 
 We have a vast collection of mods, maps and tools, for all Duke Nukem games, making it the perfect place to hang out and chat.
 
 **DNC Links:**
-- **Discord:** [DukeNukemCentral Discord](https://discord.gg/VMBfuXjFga)
-- **Website:** [DukeNukemCentral.com](https://www.DukeNukemCentral.com)
+- **Discord:** [Duke Nukem Central Discord](https://discord.gg/VMBfuXjFga)
+- **Website:** [Duke Nukem Central.com](https://www.DukeNukemCentral.com)
 
 You can also follow fellow neighbors at:
 - [DNFmaps.com](https://DNFmaps.com)
