@@ -20,6 +20,8 @@ The next steps include:
 Yes, it's open source! It is under the MIT license. Feel free to reach out and help with the project. If you fork it, don't forget to give credit back. We welcome contributions from the community!
 
 ## Big thanks to
+Duke Community for being awesome!
+
 People that helped test it out:
 - Sixty Four
 - The Real Snake Plissken
